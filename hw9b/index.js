@@ -4,9 +4,23 @@ const express = require("express");
 // Access the exported service
 const app = express();
 
+app.use(express.static("public"));
+app.use(express.static("css"));
+
+// Enable CORS (see https://enable-cors.org/server_expressjs.html)
+app.use((req, res, next) => {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header(
+      "Access-Control-Allow-Headers",
+      "Origin, X-Requested-With, Content-Type, Accept"
+    );
+    next();
+  });
+  
+
 // Return a string for requests to the root URL ("/")
 app.get("/", (request, response) => {
-  response.send("Hello from Express!");
+    response.sendFile(`${__dirname}/views/index.html`);
 });
 
 // Start listening to incoming requests
