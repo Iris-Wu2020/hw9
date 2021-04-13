@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1 - Order - Process a Form</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <h1><a href="/">Link to Start Page</a></h1>
+    <form>
+        <h1>Wu's Sample Form</h1>
+        <p>
+            <label for="name">Name</label>:
+            <input type="text" name="name" id="name" required> <span id="nameHelp"></span>
+        </p>
+        <p>
+            <label for="emailAddress">Email</label>:
+            <input type="email" name="email" id="emailAddress" required placeholder="user@domain">
+            <span id="emailHelp"></span>
+        </p>
+        <p>
+            <label for="payment">Payment type</label>: <br>
+            <input type="radio" name="payment" id="cash" value="cash"> 
+            <label for="cash">Cash</label> <br>
+            <input type="radio" name="payment" id="credit" value="credit">
+            <label for="credit">Credit Card</label> <br>
+            <input type="radio" name="payment" id="google" value="gpay"> 
+            <label for="google">Google Pay</label><br>
+            <input type="radio" name="payment" id="apple" value="apay" checked>
+            <label for="apple">Apple Pay</label> <br>
+
+        </p>
+        <p>
+            <input type="checkbox" name="promotion" id="promotion"> <label for="promotion">Sign me up for special promotions</label>
+        </p>
+        <p>
+            <label for="location">Preferred Location</label>: 
+            <select name="location" id="location">
+                <option value="la" selected>Los Angeles</option>
+                <option value="oc">Orange County</option>
+                <option value="r">Riverside</option>
+                <option value="sd">San Diego</option>
+            </select>
+        </p>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Cancel">
+    </form>
+    <p id="result"></p>
+
+    <script src="/ex1.js"></script>
+</body>
+
+</html>
