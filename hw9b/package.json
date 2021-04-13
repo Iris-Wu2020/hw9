@@ -1,0 +1,22 @@
+{
+  "name": "hw9b",
+  "version": "1.0.0",
+  "description": "Homework9b for IS645",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "homework9b",
+    "ch25",
+    "create",
+    "a",
+    "web",
+    "server"
+  ],
+  "author": "Wu Xian",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
